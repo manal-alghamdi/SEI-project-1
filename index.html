@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="model()">
+    <audio autoplay  id="bgm" src="bgm.mp3" ></audio>
+
+  <!----------------- Modal content 1-------------------->
+  <div id="welcom" class="model-background">
+    <div class="model-content">
+     <!-- <span id="close-model-one" class="close-model">&times;</span> -->
+     <h1 class="welcom-h1"> Welcome </h1> 
+     <p class="welcom-p">You probably already know how to play Tic-Tac-Toe. It's a simple game, 
+       right? Players take turns putting their marks in empty squares.
+       The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.  If no player has 3 marks in a row, the game ends in a tie. </p>
+     <button class="Next"> Next </button>
+   </div>
+ </div>
+ <!----------------- Modal content 2-------------------->
+ <div id="choosePlayer" class="model-background">
+   <div class="model-content">
+     <!-- <span id="close-model-two" class="close-model">&times;</span> -->
+       <h1 class="letsPlay-h1">Let's Play! </h1>
+       <h2 class="choose-text">choose whome you wnat to play with</h2>
+       <form class="choose">
+          <div class=choice1>
+           <input  id="AI-Player" name="choice" type="radio"  >
+           <label for="AI-Player" >Computer</label>
+          </div>
+          <div class=choice2>
+           <input  id="anther-player" name="choice" type="radio" checked>
+           <label for="anther-player"> Anather Player</label>
+           </div>
+       </form>
+       <div class="Btns"> 
+           <button  class="PreviousBtn"> Previous  </button>
+           <button  class="Next2"> Next </button>
+       </div>
+   </div>
+</div>
+
+<!----------------- Modal content 3-------------------->
+      <div id="userToken" class="model-background">
+        <div class="model-content">
+         <!-- <span id="close-model-three" class="close-model">&times;</span> -->
+           <h1 class="letsPlay-h1">Let's Play! </h1>
+            <div class="PleyerToken">
+               <div class=Player1>
+                   <h3>Player 1 :(X) </h3>
+                   <input id="p1" type="text" placeholder="Enter Player1  Name">
+               </div>
+               <div class=Player2>
+                   <h3>Player 2 :(O) </h3>
+                   <input  id="p2"  type="text" placeholder="Enter Player2 Name">
+               </div>
+           </div> 
+           <div class="Btns">
+              <button  class="PreviousBtn2"> Previous  </button>
+              <button  class="submitBtn" > Start </button>
+           </div>  
+         </div>
+     </div>
+ <!----------------- User With AI Token Modal -------------------->
+ <div onload="model2()" id="userWithAIToken" class="model-background">
+   <div class="model-content">
+    <!-- <span id="close-model-three" class="close-model">&times;</span> -->
+      <h1 class="letsPlay-h1">Let's Play! </h1>
+       <div class="PleyerToken">
+          <div class=Player1>
+              <h3>Player 1 :(X) </h3>
+              <input id="pp1" type="text" placeholder="Enter Player1  Name">
+          </div>
+          <div class=Player2>
+              <h3>Player 2 :(O) </h3>
+              <input  id="pp2"  type="text" value="Computer" readonly>
+          </div>
+      </div> 
+      <div class="Btns">
+         <button  class="PreviousBtn2"> Previous  </button>
+         <button  id="sbtn" class="submitBtn" > Start </button>
+      </div>  
+    </div>
+</div>
+   
+  <!--- ------------------ Title ----------------------->
+<!--- ------------------ Title ----------------------->
+<div>
+    <h1 class="title">Tic Tac Toe </h1>
+  </div>
+  <!--- ------------------ Game Box -------------------->
+  
+  <div id="game1" class="game">
+    <h2 class="turntext">Player 1 Turn</h2>
+    <div id="b0" class="box "></div>
+    <div id="b1" class="box "></div>
+    <div id="b2" class="box "></div>
+    <div id="b3" class="box "></div>
+    <div id="b4" class="box "></div>
+    <div id="b5" class="box "></div>
+    <div id="b6" class="box "></div>
+    <div id="b7" class="box "></div>
+    <div id="b8" class="box "></div>
+  </div>
+  <div id="game2" class="game2" >
+    <h2 class="turntext">Player 1 Turn</h2>
+    <div id="0" class="box2 "></div>
+    <div id="1" class="box2 "></div>
+    <div id="2" class="box2 "></div>
+    <div id="3" class="box2 "></div>
+    <div id="4" class="box2 "></div>
+    <div id="5" class="box2 "></div>
+    <div id="6" class="box2 "></div>
+    <div id="7" class="box2 "></div>
+    <div id="8" class="box2 "></div>
+  </div>
+   
+  <!----------------- Game status model 3-------------------->
+  <div id="gs" class="model-background">
+    <h2 class="game-result"> </h2>
+    <button class="playAgainBtn"> Play Again </button>
+  </div>
+  <!--- ------------------ Restart --------------------->
+  <div class="restart">
+    <button class="restartBtn"> Restart </button>
+  </div> 
+  <!--------------------- Status ----------------------->
+  
+  <div class="game-status">
+    <div id="P1" class="box-status">Player 1</div>
+    <div id="T" class="box-status">Ties</div>
+    <div id="P2" class="box-status">Player 2</div>
+    <div id="Player1" class="box-status">0</div>
+    <div id="Tie" class="box-status">0</div>
+    <div id="Player2" class="box-status">0</div>
+  </div>
+ 
+  <!--- ------------------ Footer ------------------- -->
+
+  <div class="footer">
+    coded with
+    <span class="love">&#9829;</span> by
+    Manal Alghamdi
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

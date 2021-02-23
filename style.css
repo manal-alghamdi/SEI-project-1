@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&family=Indie+Flower&family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:ital,wght@0,200;1,300&display=swap');
+body{
+    /*font-family: 'Poppins', sans-serif;*/
+    font-family: 'Indie Flower' ;
+    margin: 0;
+    background: linear-gradient(-45deg, #ffffff, #ca9aac, #f0db65, #bcf3e6);
+    background-size: 600% 600%;
+    animation: gradient 5s ease infinite;
+
+  
+  
+}
+.background{
+    height: 400%;
+    width: 400%;
+
+}
+h1{
+    color: ivory;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    font-family: 'Fredoka One', cursive;
+}
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+/* ---------------- Title -----------------*/
+
+.title{
+    text-align: center;
+    color: rgb(105, 23, 68);
+    font-size: 60px;
+}
+/* ---------------- Game -----------------*/
+.turntext{
+    text-align: start;
+    color: rgb(105, 23, 68);
+    grid-column: span 3;
+}
+.game{
+ 
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 306px;
+    margin: 20px auto;
+   
+}
+.game2{
+   
+    visibility:hidden;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 306px;
+    margin: 20px auto;
+   
+}
+
+
+.box {
+    border-radius: 0.3em;
+    font-family: 'Nerko One' ;
+    pointer-events: visible;
+    
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 0 1px #df72a8;
+   border: 1px solid #df72a8;
+   color:  rgb(105, 23, 68);
+    cursor: pointer;
+   line-height: 100px;
+    font-size: 90px;
+} 
+.box2 {
+    border-radius: 0.3em;
+    font-family: 'Nerko One' ;
+    pointer-events: visible;
+    
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 0 1px #df72a8;
+   border: 1px solid #df72a8;
+   color:  rgb(105, 23, 68);
+    cursor: pointer;
+   line-height: 100px;
+    font-size: 90px;
+} 
+ 
+.game-result {
+    text-align: center;
+    color:white ;
+   font-weight: bold;
+}
+
+
+
+/* ---------------- Restart button  -----------------*/
+.restart{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.game-result {
+    text-align: center;
+    color:white ;
+   font-weight: bold;
+}
+
+
+
+/* ---------------- Restart button  -----------------*/
+.restart{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+    
+.restartBtn{
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+ 
+}
+   
+
+/* ---------------- Status -----------------*/
+.status{
+    text-align: center;
+}
+.game-status{
+    border-radius: 4em;
+    padding : 3px ;
+    background-color: rgb(230, 184, 210);
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 306px;
+    margin: 50px auto;
+}
+.box-status{
+    
+    padding : 3px ;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(105, 23, 68);
+
+   
+
+}
+/* ---------------- Footer -----------------*/
+.footer {
+    
+    position          : fixed;
+    bottom            : 0;
+    background-color: rgb(230, 184, 210);
+    color: rgb(105, 23, 68);
+    height            : 1.4rem;
+    width             : 100%;
+    padding           : .2rem;
+    text-align        : center;
+    font-size         : .8rem;
+    z-index           : 999;
+    font-weight: bold;
+  }
+.footer .love {
+    color           : #b10;
+    font-size       : 1rem;
+    vertical-align  : baseline;
+  }
+
+  /* ---------------- model content -----------------*/
+
+.model-background{
+    
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color:rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.model-content{
+    border-radius: 4em;
+    background-color: #bdbe83b9;
+  margin: auto;
+  padding: 20px;
+  /*border: 1px solid #888;*/
+  width: 500px;
+  height: 250px;
+}
+.close-model {
+    color: rgb(105, 23, 68);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+.close-model:hover,
+.close-model:focus {
+    color: rgb(129, 82, 82);
+    text-decoration: none;
+    cursor: pointer;
+  }
+.letsPlay-h1{
+    color : rgb(211, 212, 113 );
+}
+.welcom-h1{
+    color : rgb(211, 212, 113 );
+    padding-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Fredoka One', cursive;
+    margin: 0px;
+    display: flex;
+    justify-content:start;
+    
+
+}
+.welcom-p{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+    margin-top: 10px;
+   font-family: 'Indie Flower' ;
+   font-weight: bold;
+  /* font-family: 'Fredoka One', cursive;*/
+   /*font-family: 'Nerko One', cursive;*/
+   font-size: 17px;
+   color: rgb(105, 23, 68);
+}
+.PleyerToken{
+    
+    padding: 10px; 
+    display: flex;
+    flex-flow: row ;
+    justify-content: center; 
+    margin-bottom: 15px;
+    
+
+}
+.Player1{
+    margin-right: 20px;
+    font-family: 'Indie Flower' ;
+    justify-content: space-between; 
+    color: rgb(105, 23, 68);
+   
+
+}
+.Player2{
+    font-family: 'Indie Flower' ;
+    justify-content: space-between; 
+    color: rgb(105, 23, 68);
+    
+}
+input[type=text] {
+    border: 3px solid  rgb(97, 13, 80);
+    border-radius: 7px;  
+    background:transparent;
+    color: rgb(75, 46, 46);
+}
+
+.Next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(105, 23, 68);
+}
+.Next:hover,
+.Next:focus {
+    background-color: rgb(126, 111, 123);
+    color: rosybrown;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.gs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+.playAgainBtn{
+ 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+.game-result{
+    
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+}
+.choose{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.choice1{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+.choice2{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+button{
+    font-family: 'Fredoka One', cursive;
+    font-weight: bolder;
+    border-radius: 2em;
+    padding:0.3em 1.2em;
+    background-color :  rgb(211, 212, 113 );
+    border:medium;
+    margin-left: 40%;
+    color: rgb(105, 23, 68);
+   
+   
+  }
+  /* ---------------- Buttons -----------------*/
+button:hover,
+button:focus {
+    background-color: rgb(126, 111, 123);
+    color: rosybrown;
+    text-decoration: none;
+    cursor: pointer;
+  }
+.btns{
+    display: flex;
+ float: right; 
+}
+.PreviousBtn{
+display: flex;
+margin-right: 30px;
+margin-left: 150px;
+float: left;
+}
+.PreviousBtn2{
+    display: flex;
+    margin-right: 30px;
+    margin-left: 150px;
+    float: left;
+    }
+.Next2{  
+    display: flex;
+    justify-content: space-between;
+}
+.choose{
+  color : rgb(105, 23, 68) ;
+}
+.choose-text{
+  color : rgb(105, 23, 68) ;
+}
+
+lable{
+  color : rgb(105, 23, 68) ;
+}
+.submitBtn{
+    display: flex;
+    justify-content: space-between;
+    background-color :rgb(211, 212, 113 );
+    color : rgb(105, 23, 68) ;
+    
+}
